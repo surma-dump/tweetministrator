@@ -33,6 +33,7 @@ func main() {
 			continue
 		}
 		if date.After(startupTime) {
+			log.Printf("Parsing \"%s\"", t.Text)
 			for _, cmd := range strings.Fields(t.Text) {
 				ExecuteCommand(strings.ToLower(cmd))
 			}
